@@ -1,0 +1,43 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rohingya Community Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { background: white; color: black; font-family: Arial; text-align: center; padding: 20px; margin: 0; }
+    h1 { color: green; font-size: 28px; margin-bottom: 5px; }
+    p { font-size: 18px; margin-bottom: 20px; }
+    button { background: green; color: white; padding: 15px 30px; font-size: 18px; border: none; border-radius: 8px; margin: 15px; }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 2px solid green; font-size: 17px; font-weight: bold; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Rohingya Community Hub</h1>
+  <p>Voice of Rohingya in Malaysia</p>
+
+  <button onclick="showReportForm()">Report Now</button>
+
+  <div id="formContainer"></div>
+
+  <h2>Recent Reports</h2>
+  <div id="posts"></div>
+
+  <footer>Website by Ayaz Khan</footer>
+
+  <script>
+    function showReportForm() {
+      document.getElementById("formContainer").innerHTML = `
+        <h3>Submit Your Report</h3>
+        <input type="text" id="title" placeholder="What happened?" style="width:90%;padding:12px;margin:8px;"><br>
+        <textarea id="details" placeholder="Write details here..." style="width:90%;height:120px;padding:12px;margin:8px;"></textarea><br>
+        <button onclick="submitReport()" style="background:green;color:white;padding:12px 25px;">Submit Report</button>
+      `;
+    }
+
+    function submitReport() {
+      alert("✅ Report submitted successfully!\nThank you for helping the community.");
+    }
+  </script>
+</body>
+</html>
